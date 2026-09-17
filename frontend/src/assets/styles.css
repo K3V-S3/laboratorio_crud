@@ -102,7 +102,7 @@ button.secondary:hover { background: var(--gray-700); }
 
 .container {
     width: min(1100px, calc(100% - 32px));
-    margin: 30 px auto;
+    margin: 30px auto;
 }
 
 .page-header {
@@ -132,13 +132,13 @@ button.secondary:hover { background: var(--gray-700); }
 input, select {
     width: 100%;
     padding: 11px;
-    border: 1px solid var --gray-300);
+    border: 1px solid var(--gray-300);
     border-radius: var(--radius-sm);
     transition: outline .15s ease;
 }
 
 input:focus, select:focus {
-    outlines: 2px solid var(--teal);
+    outline: 2px solid var(--teal);
     outline-offset: 1px;
 }
 
@@ -154,7 +154,7 @@ table {
 }
 
 thead tr {
-    background-color: ;var(--teal);
+    background: var(--teal);
     color: white;
 }
 
@@ -214,7 +214,7 @@ tbody tr:hover { background: #f0fdfa; }
 }
 
 .field {
-    position; relative;
+    position: relative;
     display: flex;
     align-items: center;
     color: var(--gray-500);
@@ -227,7 +227,7 @@ tbody tr:hover { background: #f0fdfa; }
 }
 
 .field input {
-    padding-left:
+    padding-left: 36px;
 }
 
 .field input.has-toggle {
@@ -243,3 +243,158 @@ tbody tr:hover { background: #f0fdfa; }
     color: var(--gray-500);
     box-shadow: none;
 }
+
+.toggle-visibility:hover {
+    background: transparent;
+    color: var(--gray-700);
+}
+
+.footer-note {
+    text-align: center;
+    color: var(-gray-500);
+    font-size: 0.75rem;
+}
+
+.error {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    background: #f1f5f9;
+    color: var(--gray-700);
+    border-left: 3px solid var(--teal);
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+}
+
+small { color: var(--gray-500);}
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 48px 24px;
+    color: var(--gray-500);
+    text-align: center;
+}
+
+/* cards de equipos (imagen + nombre/marca/modelo) */
+.equipos-section { margin-top: 8px; }
+.equipos-section h2 { margin-bottom: 12px; }
+
+.equipos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.equipo-card {
+    background: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.equipo-card-image {
+    height: 150px;
+    background: var(--gray-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-500);
+}
+
+.equipo-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.equipo-card-body {
+    padding: 14px 16px;
+    flex: 1;
+}
+
+.equipo-card-body h3 {
+    margin: 0 0 4px;
+    font-size: 1rem;
+    color: var(--gray-900);
+}
+
+.equipo-card-meta {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--gray-500);
+}
+
+.equipo-card-actions {
+    padding: 0 16 16px;
+}
+
+/* Campo de imagen en el formulario */
+.image-upload-field {
+        display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: var(--gray-700);
+}
+
+.image-upload-field span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+}
+
+.image-upload-field input [type="file"] {
+    padding: 8px;
+}
+
+.image-preview {
+    width: 100px;
+    height: 100px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    border: 1pxsolid var(--gray-300);
+}
+
+.image-preview img {
+    width: 100%;
+    height: 1000%;
+    object-fit: cover;
+}
+
+@media (min-widht: 641px) and (max-width: 1024px) {
+    -container {width: min(900px, calc(100% - 48px)); }
+}
+
+@media (max-width: 640px) {
+    .navbar {
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px;
+        text-align: center;
+    }
+}
+.nav-right {flex-direction: column; gap: 10px }
+
+.brand { font-size: 1.2rem; }
+
+.container { margin: 16px auto; }
+
+.actions {flex-wrap: wrap; }
+
+.form.grid .actions {
+    flex-direction: column;
+}
+
+.form-grid -actions button {
+    width: 100%
+}
+
+table {display: block; overflow-x: auto; }
